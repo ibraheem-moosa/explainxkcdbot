@@ -1,7 +1,7 @@
 # explainxkcdbot
-A Reddit bot that posts explanation of the xkcd links posted in the comments. The explanation is extracted from the explain xkcd wiki (http://explainxkcd.com)
+A Reddit bot that posts explanation of the [xkcd](https://www.xkcd.com/) links posted in the comments. The explanation is extracted from the [explain xkcd wiki](http://explainxkcd.com).
 
-### Requirements
+### Requirements-
 1. Python 3
 2. pip for Python 3 (recommended, but not necessary)
    * For installation see [here](https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers) and [here](https://pip.pypa.io/en/stable/installing/).
@@ -13,8 +13,8 @@ A Reddit bot that posts explanation of the xkcd links posted in the comments. Th
    * Install using `pip3` by running `pip3 install beautifulsoup4` or `sudo -H pip3 install beautifulsoup4` if it requires escalated privileges.
 
 
-### Obtaining Reddit API access credentials
-1. Create a Reddit account, and while logged in, navigate to preferences > apps
+### Obtaining Reddit API access credentials-
+1. Create a [Reddit](https://www.reddit.com/) account, and while logged in, navigate to preferences > apps
 2. Click on the **are you a developer? create an app...** button
 3. Fill in the details-
     * name: Name of your bot/script
@@ -24,8 +24,8 @@ A Reddit bot that posts explanation of the xkcd links posted in the comments. Th
 4. Click **create app**
 5. You will be given a `client_id` and a `client_secret`. Keep them confidential.
 
-### How to run it
-1. Clone or download (and extract) this repository and navigate to it's directory
+### How to run it-
+1. Clone or download (and extract) this repository and navigate to its directory
 2. Create a file named *praw.ini* with it's contents as:
     ```
     [explainbot]
@@ -36,6 +36,8 @@ A Reddit bot that posts explanation of the xkcd links posted in the comments. Th
     ```
 3. Create a blank text file named *commented.txt* inside the project directory
 4. In *explainxkcdbot.py*, replace the value of `path` with the location of your *commented.txt*.
-5. At a minimum, three files, namely *explainxkcdbot.py*, *praw.ini* and *commented.txt* are required for the bot to run. 
-5. Type `python3 explainxkcdbot.py` in the Terminal to run the bot.
-6. If the Reddit API returns an error due to too many requests, adjust `val` in the instances of `time.sleep(val)` in *explainxkcdbot.py*
+5. Run the command `python3 explainxkcdbot.py` in the Terminal to run the bot.
+
+### Additional notes-
+1. At a minimum, three files, namely *explainxkcdbot.py*, *praw.ini* and *commented.txt* are required for the bot to run. It is possible to use other file types (even plain text) to store the authentication credentials, but creating and using *praw.ini* is recommended.
+2. If the Reddit API returns an error due to too many requests, adjust `val` in the instances of `time.sleep(val)` in *explainxkcdbot.py*
