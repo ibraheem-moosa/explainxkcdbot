@@ -3,14 +3,14 @@ A Reddit bot that posts explanation of the xkcd links posted in the comments. Th
 
 ### Requirements
 1. Python 3
-2. pip for Python 3 (recommended)
+2. pip for Python 3 (recommended, but not necessary)
    * For installation see [here](https://packaging.python.org/guides/installing-using-linux-tools/#installing-pip-setuptools-wheel-with-linux-package-managers) and [here](https://pip.pypa.io/en/stable/installing/).
 2. PRAW
-   * Install using pip3 by running `pip3 install praw` or `sudo -H pip3 install praw` if it requires escalated privileges.
+   * Install using `pip3` by running `pip3 install praw` or `sudo -H pip3 install praw` if it requires escalated privileges.
 3. Python Requests
-   * Install using pip3 by running `pip3 install requests` or `sudo -H pip3 install requests` if it requires escalated privileges.
+   * Install using `pip3` by running `pip3 install requests` or `sudo -H pip3 install requests` if it requires escalated privileges.
 4. Beautiful Soup 4
-   * Install using pip3 by running `pip3 install beautifulsoup4` or `sudo -H pip3 install beautifulsoup4` if it requires escalated privileges.
+   * Install using `pip3` by running `pip3 install beautifulsoup4` or `sudo -H pip3 install beautifulsoup4` if it requires escalated privileges.
 
 
 ### Obtaining Reddit API access credentials
