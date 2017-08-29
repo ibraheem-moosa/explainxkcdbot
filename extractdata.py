@@ -26,7 +26,7 @@ def main():
                 break
             if (tag.name == 'h3'):
                 tag = tag.nextSibling
-                # This skips the contents of the 'h3' tag, which is irrelevant to the explanation
+                # This skips the contents of the 'h3' tag, which are irrelevant to the explanation
             else:
                 data = data + '\n' + tag.text
                 tag = tag.nextSibling
