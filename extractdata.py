@@ -1,4 +1,4 @@
-# An independent program to simply fetch and display explanation of an xkcd comic strip
+# An independent program to fetch and display explanation of an xkcd comic by providing its serial number
 # The explanation is extracted from http://explainxkcd.com
 # Created by Ayush Dwivedi (/u/kindw)
 # License: MIT License
@@ -26,6 +26,7 @@ def main():
                 break
             if (tag.name == 'h3'):
                 tag = tag.nextSibling
+                # This skips the contents of the 'h3' tag, which is irrelevant to the explanation
             else:
                 data = data + '\n' + tag.text
                 tag = tag.nextSibling
