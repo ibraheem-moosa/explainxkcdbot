@@ -37,9 +37,9 @@ def fetchdata(url):
     data = ''
     while True:
         if isinstance(tag, bs4.element.Tag):
-            if (tag.name == 'h2'):
+            if tag.name == 'h2':
                 break
-            if (tag.name == 'h3'):
+            if tag.name == 'h3':
                 tag = tag.nextSibling
             else:
                 data = data + '\n' + tag.text
@@ -55,7 +55,7 @@ def run_explainbot(reddit):
     print("Getting 250 comments...\n")
     
     for comment in reddit.subreddit('test').comments(limit = 250):
-        match = re.findall("[a-z]*[A-Z]*[0-9]*https://www.xkcd.com/[0-9]+", comment.body)
+        match = re.findall("https://www.xkcd.com/[0-9]+", comment.body)
         if match:
             print('Link found in comment with comment ID: ' + comment.id)
             xkcd_url = match[0]
