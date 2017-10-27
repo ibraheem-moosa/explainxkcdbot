@@ -12,7 +12,7 @@ import re
 import requests
 import bs4
 
-path = '/home/ayush/Projects/explainxkcdbot/commented.txt'
+path = './commented.txt'
 # Location of file where id's of already visited comments are maintained
 
 header = '**Explanation of this xkcd:**\n'
@@ -39,13 +39,10 @@ def fetchdata(url):
         if isinstance(tag, bs4.element.Tag):
             if tag.name == 'h2':
                 break
-            if tag.name == 'h3':
-                tag = tag.nextSibling
             else:
                 data = data + '\n' + tag.text
-                tag = tag.nextSibling
-        else:
-            tag = tag.nextSibling
+        
+        tag = tag.nextSibling
     
     return data
 
